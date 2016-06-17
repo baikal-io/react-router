@@ -1,6 +1,8 @@
-import history from 'history'
+import { createHistory } from 'history'
 import useRouterHistory from './useRouterHistory'
 
-export default useRouterHistory(history.createHistory)({
+const browserHistory = useRouterHistory(createHistory)({
   basename: '/negotiations'
 })
+
+export default browserHistory
